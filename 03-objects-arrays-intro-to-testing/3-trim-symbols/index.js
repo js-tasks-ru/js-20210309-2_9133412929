@@ -24,3 +24,4 @@ export function trimSymbols(string, size) {
     return str;
   }, firstSlice);
 }
+
