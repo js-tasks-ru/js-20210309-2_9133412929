@@ -26,16 +26,16 @@ export default class ColumnChart {
     `;
 
     if (this.data.length) {
-      this.element?.firstElementChild.classList.remove('column-chart_loading');
+      element.firstElementChild.classList.remove('column-chart_loading');
     }
-      
+
     this.element = element.firstElementChild;
-  }  
+  }
 
   getColumnProps(data) {
     const maxValue = Math.max(...data);
     const scale = 50 / maxValue;
-  
+
     return data.map(item => {
       const percent = (item / maxValue * 100).toFixed(0) + '%';
       const value = String(Math.floor(item * scale));
