@@ -137,14 +137,14 @@ export default class SortableTable {
 
     return arr.sort((a, b) => {
       switch (sortType) {
-      case 'number':
-        return direction * (a[id] - b[id]);
-      case 'string':
-        return direction * a[id].localeCompare(b[id], 'ru');
-      case 'custom':
-        return direction * customSorting(a, b);
-      default:
-        return direction * (a[id] - b[id]);
+        case 'number':
+          return direction * (a[id] - b[id]);
+        case 'string':
+          return direction * a[id].localeCompare(b[id], 'ru');
+        case 'custom':
+          return direction * customSorting(a, b);
+        default:
+          return direction * (a[id] - b[id]);
       }
     });
   }
